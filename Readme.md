@@ -1,3 +1,77 @@
+
+
+# 📘 README: Graph Algorithms in Java
+
+## 🧩 Overview
+
+This project implements several classic graph algorithms in Java, including:
+
+- 🔁 Breadth-First Search (BFS)
+- 🧭 Depth-First Search (DFS), incl. topological sorting
+- 🔗 Strongly Connected Components (SCC)
+- 🌲 Minimum Spanning Forests (Prim's algorithm)
+- 🛣️ Shortest Paths (Bellman-Ford & Dijkstra)
+
+All implementations conform to the interfaces provided in `graph.java`, and follow a clear `XYZImpl` naming convention for each algorithm and graph structure.
+
+## ✅ Implemented Interfaces and Classes
+
+| Interface        | Implementation        | Purpose                             |
+|------------------|------------------------|-------------------------------------|
+| `Graph`          | `GraphImpl`            | Basic directed graph representation |
+| `WeightedGraph`  | `WeightedGraphImpl`    | Graph with edge weights             |
+| `BFS`            | `BFSImpl`              | Breadth-First Search                |
+| `DFS`            | `DFSImpl`              | Depth-First Search + topo sort      |
+| `SCC`            | `SCCImpl`              | Strongly Connected Components       |
+| `MSF`            | `MSFImpl`              | Minimum Spanning Forest             |
+| `SP`             | `SPImpl`               | Shortest Paths (Bellman & Dijkstra) |
+
+## ⚙️ How to Use
+
+Compile all Java files:
+
+```bash
+javac *.java
+```
+
+Then use the provided test program:
+
+```bash
+java GraphTest dfs            # Runs DFS on default graph
+java GraphTest bfs            # Runs BFS
+java GraphTest scc            # Detects strongly connected components
+java GraphTest msf            # Finds minimal spanning forest (for undirected graphs)
+java GraphTest dijkstra 0     # Dijkstra from node 0
+java GraphTest bellman 2      # Bellman-Ford from node 2
+```
+
+Graphs are defined via adjacency lists like this:
+
+```java
+Graph g = new GraphImpl(new int[][] {
+    {1, 2}, // Node 0 → 1, 2
+    {},     // Node 1 → none
+    {2}     // Node 2 → 2 (self-loop)
+});
+```
+
+For weighted graphs:
+
+```java
+WeightedGraph wg = new WeightedGraphImpl(
+    new int[][] { {1}, {2}, {} },
+    new double[][] { {2.5}, {1.0}, {} }
+);
+```
+
+## 📝 Notes
+
+- 🧪 Tested with the `GraphTest` program
+- 📦 No external libraries, no package declarations
+- 💡 Uses `BinHeap` (see Aufgabe 2) for priority-based algorithms
+- 🔒 Respects all method constraints and interface boundaries
+
+
 # 📘 README: BinHeap.java
 
 ## 🧩 Overview
