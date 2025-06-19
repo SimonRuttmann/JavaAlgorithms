@@ -1,4 +1,43 @@
 
+# 📦 HuffmanEncoding.java
+
+## 🚀 Overview
+
+This Java class **Huffman** implements Huffman coding for lossless text compression.
+
+It can:
+
+- 🔢 Calculate character frequencies
+- 🌲 Build a Huffman prefix code tree
+- 🔐 Encode texts
+- 🔓 Decode encoded texts
+- 🛡️ Handle errors (e.g., null inputs)
+
+## ⚙️ Key Methods
+
+- `calculateFrequencies(String text)` – Count frequencies
+- `constructPrefixCode(Integer[] frequencies)` – Build tree
+- `canEncode(String text)` – Check if text can be encoded
+- `encode(String text, boolean newPrefixCode)` – Encode text
+- `decode(String encodedText)` – Decode text
+- `dumpPrefixCodes()` – Print prefix codes
+
+## 📝 Notes
+
+- Uses BinHeap as helper (not included in submission)
+- Recursive helpers for tree traversal
+- Proper error handling with messages
+
+## Example Usage
+
+```bash
+enc1 Abracadabra
+Encoded Text: 101011111001011010001111100
+
+dec 101011111001011010001111100
+Decoded Text: Abracadabra
+```
+
 
 # 📘 README: Graph Algorithms in Java
 
