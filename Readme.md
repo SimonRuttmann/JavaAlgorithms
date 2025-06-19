@@ -2,6 +2,32 @@
 
 A collection of algorithms implemented during my studies at **Aalen University**.
 
+<!-- TOC -->
+* [Java Algorithms](#java-algorithms)
+  * [📘 Graph Algorithms](#-graph-algorithms)
+    * [🧩 Overview](#-overview)
+    * [✅ Implemented Interfaces and Classes](#-implemented-interfaces-and-classes)
+    * [⚙️ How to Use](#-how-to-use)
+    * [📝 Notes](#-notes)
+  * [📘 Hashtable](#-hashtable)
+    * [🧩 Overview](#-overview-1)
+    * [✅ Features](#-features)
+    * [🚀 Usage](#-usage)
+    * [📝 Notes](#-notes-1)
+  * [📘 BinHeap](#-binheap)
+    * [🧩 Overview](#-overview-2)
+    * [✅ Features](#-features-1)
+    * [🚀 Usage](#-usage-1)
+      * [🧪 Test Program Commands](#-test-program-commands)
+    * [📝 Notes](#-notes-2)
+  * [📦 HuffmanEncoding](#-huffmanencoding)
+    * [🚀 Overview](#-overview-3)
+    * [⚙️ Key Methods](#-key-methods)
+    * [📝 Notes](#-notes-3)
+    * [Example Usage](#example-usage)
+* [📜 License](#-license)
+<!-- TOC -->
+
 ## 📘 Graph Algorithms
 
 ### 🧩 Overview
