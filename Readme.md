@@ -1,47 +1,10 @@
+# Java Algorithms
 
-# 📦 HuffmanEncoding.java
+A collection of algorithms implemented during my studies at **Aalen University**.
 
-## 🚀 Overview
+## 📘 Graph Algorithms
 
-This Java class **Huffman** implements Huffman coding for lossless text compression.
-
-It can:
-
-- 🔢 Calculate character frequencies
-- 🌲 Build a Huffman prefix code tree
-- 🔐 Encode texts
-- 🔓 Decode encoded texts
-- 🛡️ Handle errors (e.g., null inputs)
-
-## ⚙️ Key Methods
-
-- `calculateFrequencies(String text)` – Count frequencies
-- `constructPrefixCode(Integer[] frequencies)` – Build tree
-- `canEncode(String text)` – Check if text can be encoded
-- `encode(String text, boolean newPrefixCode)` – Encode text
-- `decode(String encodedText)` – Decode text
-- `dumpPrefixCodes()` – Print prefix codes
-
-## 📝 Notes
-
-- Uses BinHeap as helper (not included in submission)
-- Recursive helpers for tree traversal
-- Proper error handling with messages
-
-## Example Usage
-
-```bash
-enc1 Abracadabra
-Encoded Text: 101011111001011010001111100
-
-dec 101011111001011010001111100
-Decoded Text: Abracadabra
-```
-
-
-# 📘 README: Graph Algorithms in Java
-
-## 🧩 Overview
+### 🧩 Overview
 
 This project implements several classic graph algorithms in Java, including:
 
@@ -53,7 +16,7 @@ This project implements several classic graph algorithms in Java, including:
 
 All implementations conform to the interfaces provided in `graph.java`, and follow a clear `XYZImpl` naming convention for each algorithm and graph structure.
 
-## ✅ Implemented Interfaces and Classes
+### ✅ Implemented Interfaces and Classes
 
 | Interface        | Implementation        | Purpose                             |
 |------------------|------------------------|-------------------------------------|
@@ -65,7 +28,7 @@ All implementations conform to the interfaces provided in `graph.java`, and foll
 | `MSF`            | `MSFImpl`              | Minimum Spanning Forest             |
 | `SP`             | `SPImpl`               | Shortest Paths (Bellman & Dijkstra) |
 
-## ⚙️ How to Use
+### ⚙️ How to Use
 
 Compile all Java files:
 
@@ -103,7 +66,7 @@ WeightedGraph wg = new WeightedGraphImpl(
 );
 ```
 
-## 📝 Notes
+### 📝 Notes
 
 - 🧪 Tested with the `GraphTest` program
 - 📦 No external libraries, no package declarations
@@ -111,81 +74,10 @@ WeightedGraph wg = new WeightedGraphImpl(
 - 🔒 Respects all method constraints and interface boundaries
 
 
-# 📘 README: BinHeap.java
 
-## 🧩 Overview
+## 📘 Hashtable
 
-This project implements a generic minimum-priority queue using binomial heaps. 
-It supports elements with any comparable priority type `P` and any data type `D`.
-
-## ✅ Features
-
-* 🧮 Generic class: `BinHeap<P extends Comparable<? super P>, D>`
-* 📦 Supports the following operations:
-
-  * `insert(p, d)`: Add new entry with priority `p` and data `d`
-  * `minimum()`: Return the entry with the smallest priority
-  * `extractMin()`: Remove and return the minimum entry
-  * `changePrio(e, p)`: Change the priority of an entry
-  * `remove(e)`: Remove a specific entry
-  * `contains(e)`, `isEmpty()`, `size()`
-  * `dump()`: Print structure of the heap
-* 🧠 Fully handles null safety and invalid operations as specified
-* ⚙️ Efficient operations (logarithmic runtime where required)
-
-## 🚀 Usage
-
-Compile the class:
-
-```bash
-javac BinHeap.java
-```
-
-Then run the interactive test program:
-
-```bash
-java BinHeapTest
-```
-
-### 🧪 Test Program Commands
-
-The test program supports the following commands:
-
-| Command | Description                       |
-| ------- | --------------------------------- |
-| `+ a`   | Insert entry with priority `a`    |
-| `- 1`   | Remove entry at index 1           |
-| `?`     | Show entry with minimum priority  |
-| `!`     | Extract and remove minimum entry  |
-| `= 1 a` | Change priority of entry 1 to `a` |
-| `#`     | Check if heap is empty            |
-| `& 1`   | Check if heap contains entry 1    |
-
-🔢 Priorities can be strings (e.g., `a`, `b`, `z`) and data values are integers (auto-assigned during insert).
-
-Example input sequence:
-
-```text
-+ a
-+ b
-+ c
-?
-!
-= 0 z
-```
-
-## 📝 Notes
-
-* 🧑‍💻 Pure Java, no external libraries
-* 🛠 No `package` declarations used
-* 📚 Follows binomial heap logic from lecture slides
-* 📈 Uses helper methods for merging heaps and linking trees
-
-
-
-# 📘 README: hashing.java
-
-## 🧩 Overview
+### 🧩 Overview
 
 This project is a basic Java implementation of hash tables. It includes:
 
@@ -193,18 +85,18 @@ This project is a basic Java implementation of hash tables. It includes:
 * 🔁 **Probing strategies**: Linear, Quadratic, Double Hashing
 * 📦 **Hash tables**:
 
-    * With **chaining**
-    * With **open addressing**
+  * With **chaining**
+  * With **open addressing**
 * 🧪 A test program: `WordCount` that counts word frequencies using different configurations
 
-## ✅ Features
+### ✅ Features
 
 * ❌ No use of `java.util` or package declarations
 * 🧠 Fully implemented methods: `compute`, `first`, `next`, `put`, `get`, `remove`, `dump`
 * ➖ Correct handling of negative `hashCode()` values
 * 📾 Method behavior follows the given specs exactly
 
-## 🚀 Usage
+### 🚀 Usage
 
 Compile all classes (they are in a single file or zip):
 
@@ -236,7 +128,124 @@ java WordCount q m 2 3 < words
 java WordCount l d 4 < words
 ```
 
-## 📝 Notes
+### 📝 Notes
 
 * ⚙️ 100% pure Java (no external libraries)
 * 🔑 Can be used with different key types (not just strings)
+
+
+## 📘 BinHeap
+
+### 🧩 Overview
+
+This project implements a generic minimum-priority queue using binomial heaps. 
+It supports elements with any comparable priority type `P` and any data type `D`.
+
+### ✅ Features
+
+* 🧮 Generic class: `BinHeap<P extends Comparable<? super P>, D>`
+* 📦 Supports the following operations:
+
+  * `insert(p, d)`: Add new entry with priority `p` and data `d`
+  * `minimum()`: Return the entry with the smallest priority
+  * `extractMin()`: Remove and return the minimum entry
+  * `changePrio(e, p)`: Change the priority of an entry
+  * `remove(e)`: Remove a specific entry
+  * `contains(e)`, `isEmpty()`, `size()`
+  * `dump()`: Print structure of the heap
+* 🧠 Fully handles null safety and invalid operations as specified
+* ⚙️ Efficient operations (logarithmic runtime where required)
+
+### 🚀 Usage
+
+Compile the class:
+
+```bash
+javac BinHeap.java
+```
+
+Then run the interactive test program:
+
+```bash
+java BinHeapTest
+```
+
+#### 🧪 Test Program Commands
+
+The test program supports the following commands:
+
+| Command | Description                       |
+| ------- | --------------------------------- |
+| `+ a`   | Insert entry with priority `a`    |
+| `- 1`   | Remove entry at index 1           |
+| `?`     | Show entry with minimum priority  |
+| `!`     | Extract and remove minimum entry  |
+| `= 1 a` | Change priority of entry 1 to `a` |
+| `#`     | Check if heap is empty            |
+| `& 1`   | Check if heap contains entry 1    |
+
+🔢 Priorities can be strings (e.g., `a`, `b`, `z`) and data values are integers (auto-assigned during insert).
+
+Example input sequence:
+
+```text
++ a
++ b
++ c
+?
+!
+= 0 z
+```
+
+### 📝 Notes
+
+* 🧑‍💻 Pure Java, no external libraries
+* 🛠 No `package` declarations used
+* 📚 Follows binomial heap logic from lecture slides
+* 📈 Uses helper methods for merging heaps and linking trees
+
+
+## 📦 HuffmanEncoding
+
+### 🚀 Overview
+
+This Java class **Huffman** implements Huffman coding for lossless text compression.
+
+It can:
+
+- 🔢 Calculate character frequencies
+- 🌲 Build a Huffman prefix code tree
+- 🔐 Encode texts
+- 🔓 Decode encoded texts
+- 🛡️ Handle errors (e.g., null inputs)
+
+### ⚙️ Key Methods
+
+- `calculateFrequencies(String text)` – Count frequencies
+- `constructPrefixCode(Integer[] frequencies)` – Build tree
+- `canEncode(String text)` – Check if text can be encoded
+- `encode(String text, boolean newPrefixCode)` – Encode text
+- `decode(String encodedText)` – Decode text
+- `dumpPrefixCodes()` – Print prefix codes
+
+### 📝 Notes
+
+- Uses BinHeap as helper (not included in submission)
+- Recursive helpers for tree traversal
+- Proper error handling with messages
+
+### Example Usage
+
+```bash
+enc1 Abracadabra
+Encoded Text: 101011111001011010001111100
+
+dec 101011111001011010001111100
+Decoded Text: Abracadabra
+```
+
+---
+
+# 📜 License
+
+This project is licensed under the [Apache 2.0 License](LICENSE). Feel free to use it – just give proper credit. 🤝
